@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <!-- <h1><span class="letterA">A</span>ll Cats Are Beautiful</h1> -->
+      <div class="waviy">
+        <span style="--i: 1" class="letterA">A</span>
+        <span style="--i: 2">l</span>
+        <span style="--i: 3">l</span>
+        <span style="--i: 4">&#128049</span>
+        <span style="--i: 5">C</span>
+        <span style="--i: 6">a</span>
+        <span style="--i: 7">t</span>
+        <span style="--i: 8">s</span>
+        <span style="--i: 9">&#128008</span>
+        <span style="--i: 10">A</span>
+        <span style="--i: 11">r</span>
+        <span style="--i: 12">e</span>
+        <span style="--i: 13">&#128049</span>
+        <span style="--i: 14">B</span>
+        <span style="--i: 15">e</span>
+        <span style="--i: 16">a</span>
+        <span style="--i: 17">u</span>
+        <span style="--i: 18">t</span>
+        <span style="--i: 19">i</span>
+        <span style="--i: 20">f</span>
+        <span style="--i: 21">u</span>
+        <span style="--i: 22">l</span>
+        <!-- <span style="--i: 23"></span>
+        <span style="--i: 24"></span>
+        <span style="--i: 25"></span> -->
+      </div>
+      <div class="images" data-js="clicksCounter">
+        <div class="image" id="add" data-js="plus">
+          <img src="/cats/twocats.jpg" alt="image" class="image" />
+          <div class="hidden"><p>n+n</p></div>
+        </div>
+
+        <div class="image" id="power2" data-js="n2">
+          <img src="/cats/cat-square1.jpg" alt="image" class="image" />
+          <div class="hidden"><p>n**2</p></div>
+        </div>
+
+        <div class="image" data-js="n3">
+          <img src="/cats/powerOf3.png" alt="image" class="image" />
+          <div class="hidden"><p>n**3</p></div>
+        </div>
+
+        <div class="image" data-js="pi">
+          <img src="/cats/cat3.14.png" alt="image" class="image" />
+          <div class="hidden"><p>n*π</p></div>
+        </div>
+        <div class="image" data-js="√n">
+          <img src="/cats/under-tree.jpg" alt="image" class="image" />
+          <div class="hidden"><p>√n</p></div>
+        </div>
+        <div class="image" data-js="divide">
+          <img src="/cats/cat-divided.jpg" alt="image" class="image" />
+          <div class="hidden"><p>n/2</p></div>
+        </div>
+        <div class="image" data-js="addProcent10">
+          <img src="/cats/plus10.png" alt="add 10 procent" class="image" />
+          <div class="hidden"><p>n+10%</p></div>
+        </div>
+        <div class="image" data-js="removeProcent10">
+          <img src="/cats/minus10.png" alt="remove 10 procent" class="image" />
+          <div class="hidden"><p>n+10%</p></div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section data-js="message"></section>
+      <section class="middle">
+        <h3>Input a number</h3>
+        <input
+          type="number"
+          id="input"
+          name="output"
+          min="0"
+          max="5"
+          placeholder=" Between 1 and 5"
+          data-js="input"
+          autofocus
+        />
+        <p>and reach the number 1312 as less clicks as possible</p>
+        <br />
+        <br />
+        <p data-js="clicks" id="clicks"></p>
+      </section>
+      <section>
+        <div class="fineTuning">
+          <div class="fineTuning1" data-js="plus1">
+            <p data-js="counter">+1</p>
+          </div>
+          <div class="fineTuning1" data-js="plus5">
+            <p data-js="counter">+5</p>
+          </div>
+          <div class="fineTuning1" data-js="minus1">
+            <p data-js="counter">-1</p>
+          </div>
+          <div class="fineTuning1" data-js="minus5">
+            <p data-js="counter">-5</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer data-js="message"></footer>
+    <script src="/index.js"></script>
+  </body>
+</html>
