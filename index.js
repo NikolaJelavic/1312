@@ -21,6 +21,7 @@ let clicks = document.querySelector("[data-js=clicks]");
 
 let inputString = document.querySelector("[data-js=input]");
 
+let expected = 1312;
 //  let input = parseInt(inputString.value);
 // let input = Number(inputString.value);
 // if (input>5){
@@ -35,19 +36,7 @@ plus.addEventListener("click", () => {
 
   inputString.value = add;
 });
-// plus.addEventListener("click", () => {
-//     let inputValue = parseInt(inputString.value);
-//     let add = inputValue + inputValue;
 
-//     result.value = add;
-//     inputString.value = "";
-
-//     if (!isNaN(parseInt(result.value))) {
-//         let addNew = parseInt(result.value);
-//         addNew = addNew + addNew;
-//         result.value = addNew;
-//       }
-//   });
 power2.addEventListener("click", () => {
   let inputValue = parseInt(inputString.value);
   let power2 = inputValue ** 2;
@@ -118,17 +107,37 @@ clicksCounter.addEventListener("click", () => {
   clicks.innerHTML = counter;
   if (counter >= 5 && counter < 7) {
     message.innerHTML =
-      '<img src="/cats/support1.jpg" width="400px" height="400px">';
+      '<img src="./cats/support1.jpg" width="400px" height="400px">';
+  } else if (counter == 3) {
+    message.innerHTML =
+      '<img src="./cats/support2.png" width="400px" height="400px">';
+  } else if (counter == 5) {
+    message.innerHTML =
+      '<img src="./cats/support3.png" width="400px" height="400px">';
   } else if (counter == 7) {
     message.innerHTML =
-      '<img src="/cats/support2.png" width="400px" height="400px">';
+      '<img src="./cats/support4.png" width="400px" height="400px">';
   } else if (counter == 9) {
     message.innerHTML =
-      '<img src="/cats/support3.png" width="400px" height="400px">';
-  } else if (counter == 11) {
+      '<img src="./cats/support5-suheyl-burak-WhHc2Z9XV9k-unsplash.jpg" width="400px" height="400px">';
+  }else if (counter == 11) {
     message.innerHTML =
-      '<img src="/cats/support4.png" width="400px" height="400px">';
+      '<img src="./cats/support9-pexels-bruchin-noeka-6011952.jpg" width="400px" height="400px">';
   }
+  else if (counter == 13) {
+    message.innerHTML =
+      '<img src="./cats/support7-pexels-anna-shvets-4587955.jpg" width="400px" height="400px">';
+  }
+  else if (counter == 15) {
+    message.innerHTML =
+      '<img src="./cats/support8-pexels-alina-vilchenko-3218841.jpg" width="400px" height="400px">';
+  }
+  else if (counter == 17) {
+    message.innerHTML =
+      '<img src="./cats/support6-sergey-semin-6TiFuD_1q4o-unsplash.jpg" width="400px" height="400px">';
+  }
+  
+  
 });
 fineTuning.addEventListener("click", () => {
   counter++;
@@ -147,6 +156,7 @@ fineTuning.addEventListener("click", () => {
       '<img src="/cats/support4.png" width="400px" height="400px">';
   }
 });
+
 
 // if ((inputString.value = 1312)) {
 //   console.log("well done");
