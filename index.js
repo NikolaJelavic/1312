@@ -58,14 +58,16 @@ power3.addEventListener("click", () => {
 
 pi.addEventListener("click", () => {
   let inputValue = parseInt(inputString.value);
-  let pi = inputValue * Math.PI;
-  inputString.value = pi;
+  let calculatedValue = inputValue * Math.PI;
+  let roundedValue = Math.round(calculatedValue);
+  inputString.value = roundedValue;
 });
 
 sqr.addEventListener("click", () => {
   let inputValue = parseInt(inputString.value);
-  let sqr = Math.sqrt(inputValue);
-  inputString.value = sqr;
+  let squareRoot = Math.sqrt(inputValue);
+  let roundedSquareRoot = Math.round(squareRoot);
+  inputString.value = roundedSquareRoot;
 });
 
 divide.addEventListener("click", () => {
@@ -76,14 +78,16 @@ divide.addEventListener("click", () => {
 
 addProcent10.addEventListener("click", () => {
   let inputValue = parseInt(inputString.value);
-  let addProcent10 = inputValue * 1.1;
-  inputString.value = addProcent10;
+  let calculatedValue = inputValue * 1.1;
+  let roundedValue = Math.round(calculatedValue);
+  inputString.value = roundedValue;
 });
 
 removeProcent10.addEventListener("click", () => {
   let inputValue = parseInt(inputString.value);
-  let removeProcent10 = inputValue * 0.9;
-  inputString.value = removeProcent10;
+  let calculatedValue = inputValue * 0.9;
+  let roundedValue = Math.round(calculatedValue);
+  inputString.value = roundedValue;
 });
 
 plus1.addEventListener("click", () => {
