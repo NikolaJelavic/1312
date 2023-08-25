@@ -21,12 +21,19 @@ let clicks = document.querySelector("[data-js=clicks]");
 
 let inputString = document.querySelector("[data-js=input]");
 
-let expected = 1312;
-//  let input = parseInt(inputString.value);
-// let input = Number(inputString.value);
-// if (input>5){
-//     console.log("error");
-// }
+inputString.addEventListener("input", () => {
+  let inputValue = inputString.value;
+  inputValue = inputValue.replace(/\D/g, ""); // Remove non-numeric characters
+
+  // Ensure the input value is within the range of 1 to 5
+  if (inputValue < 1) {
+    inputValue = 1;
+  } else if (inputValue > 5) {
+    inputValue = 5;
+  }
+
+  inputString.value = inputValue;
+});
 
 let result = document.querySelector("[data-js=result]");
 
@@ -155,9 +162,13 @@ fineTuning.addEventListener("click", () => {
     message.innerHTML =
       '<img src="/cats/support4.png" width="400px" height="400px">';
   }
-});
-
-
-// if ((inputString.value = 1312)) {
-//   console.log("well done");
-// }
+  if (inputString.value === "1312") {
+    const successModal = document.getElementById("successModal");
+    successModal.style.display = "block";
+  
+    const closeModalButton = document.getElementById("closeModal");
+    closeModalButton.addEventListener("click", () => {
+      successModal.style.display = "none";
+    });
+  }
+})

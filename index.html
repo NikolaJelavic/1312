@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/ico" href="./cats/favicon.jpg" />
   </head>
   <body>
     <header>
@@ -77,19 +78,20 @@
     </header>
     <main>
       <section data-js="message"></section>
-      <section class="middle">
+      <section >
+        <div class="middle">
         <h3>Input a number</h3>
         <input
-          type="number"
+          type="text"
           id="input"
           name="output"
-          min="0"
-          max="5"
+          pattern="[1-5]"
           placeholder=" Between 1 and 5"
           data-js="input"
           autofocus
         />
-        <p>and reach the number 1312 as less clicks as possible</p>
+        <p>and reach the number 1312 as less clicks(on images) as possible</p>
+      </div>
         
         <p data-js="clicks" id="clicks"></p>
       </section>
@@ -110,6 +112,14 @@
         </div>
       </section>
     </main>
+
+    <div class="modal" id="successModal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <p>Well done!!</p>
+      </div>
+    </div>
+
     <footer data-js="message"></footer>
     <!-- <script src="/index.js"></script> -->
     <!-- <script src=".index.js"></script> -->
