@@ -32,29 +32,30 @@ header {
 .images {
   display: flex;
   flex-wrap: wrap;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  
+  
+  justify-content: space-evenly;
+
 }
 
 .image {
   display: flex;
-  flex-direction: column;
-  height: 7vh;
-  width: 5vw;
+
+  flex-wrap: wrap;
+
+  height: 100px;
+  width: 100px;
   border-radius: 10px;
   box-shadow: 5px 5px 5px black;
-  margin: 2%;
+  /* margin: 2%; */
   z-index: 0;
   position: relative;
 }
 
 img {
-  border-radius: 50%;
+  border-radius: 5%;
   border: 2px solid var(--red);
-  width: 33vw;
+  width: 30vw;
   height: 50vh;
   /* margin-top: -15%; */
 }
@@ -72,11 +73,10 @@ img.image:hover {
 
 .hidden {
   padding: 2%;
-
   height: 40px;
-  width: 100px;
-  left: 25px;
-  top: -50px;
+  width: auto;
+  left: 1px;
+  top: 55px;
   display: none;
 
   /* text-align: center; */
@@ -89,13 +89,12 @@ img.image:hover {
   font-family: sans;
   color: black;
   border-radius: 20px;
+  border: 2px solid var(--blue);
+  padding:5px;
 }
-/* div.hidden p {
-  text-align: center;
-} */
 
 main {
-  /* background-color: bisque; */
+
   display: flex;
   flex-direction: row;
   background-color: var(--blue);
@@ -104,10 +103,14 @@ main > section {
   width: 33vw;
   border-radius: 20px;
   margin-top: 2%;
+  
 }
 .middle {
   background-color: var(--red);
-  height: 33vh;
+  /* height:auto; */
+  height: 310px;
+
+  width:40vw;
 }
 
 section p {
@@ -154,9 +157,9 @@ h3 {
 #clicks {
   width: 80px;
   height: 80px;
-  background-color: var(--red);
+  background-color: var(--blue);
   /* margin-left: 30vw; */
-  border-radius: 50%;
+  border-radius: 20%;
   font-size: 3em;
   animation: wiggle 2s linear infinite;
   margin-top: 5vh;
@@ -243,5 +246,41 @@ h3 {
   0%,
   80% {
     transform: rotateY(360deg);
+  }
+}
+
+@media (max-width: 481px) {
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    
+  }
+  main >section {
+    width:auto;
+  }
+
+  .middle{
+    width:100%;
+    height: 220px;
+    justify-content: center;
+  }
+  section.fine{
+    display: flex;
+  }
+  .fineTuning{
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    flex-direction: row;
+    width:auto;
+  }
+  .fineTuning1{
+    width:50px;
+    height: 50px;
+  }
+  section img{
+    width:100%;
+    height: 30%;
+    border-radius: 10px;
   }
 }
