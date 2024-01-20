@@ -29,6 +29,22 @@ header {
   /* height: 30vh; */
 }
 
+.index{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.index div{
+  text-align: center; 
+  width: 20vw;
+  height: 20vh;
+  background-color: #f45050;
+  margin: 5px;
+  border-radius: 10px;
+
+}
+
 .images {
   display: flex;
   flex-wrap: wrap;
@@ -380,4 +396,24 @@ h3 {
     border-radius: 20px;
     border: 2px solid var(--red);
   }
+}
+
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px; /* You can adjust the height as needed */
+  background-color: #f0f0f0; /* Optional: Add a background color */
+}
+
+nav a {
+  margin: 0 15px; /* Adjust the spacing between the links */
+  text-decoration: none;
+  color: #333; /* Set the link color */
+  font-weight: bold; /* Optional: Add bold font weight */
+}
+
+nav a:hover {
+  color: #007bff; /* Change color on hover */
 }
