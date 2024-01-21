@@ -82,13 +82,15 @@ export class ONekoElement extends HTMLElement {
     
     // todo: make cat follow mouse stuff separate or optional and make element more versatile
     this.onMouseMove = (e) => {
-      // todo: make this better
+      const offsetX = parseInt(this.getAttribute('offset-x')) || 0;
+      const offsetY = parseInt(this.getAttribute('offset-y')) || 0;
+  
       const [x, y] = this.style.position === "fixed"
-        ? [e.clientX, e.clientY]
-        : [e.offsetX, e.offsetY]
-
-      this.goto.x = x;
-      this.goto.y = y;
+          ? [e.clientX, e.clientY]
+          : [e.offsetX, e.offsetY];
+  
+      this.goto.x = x + offsetX;
+      this.goto.y = y + offsetY;
     };
 
     this.onMouseOut = () => {
@@ -141,28 +143,28 @@ export class ONekoElement extends HTMLElement {
 
     let idleAnimation = null;
     if (this.idleFrame > 10 && !playingIdleAnimation && randomInt(0, 200) === 0) {
-      idleAnimation = ["sleeping", "scratch"][randomInt(0, 1)]
-      this.idleFrame = 0
+      idleAnimation = ["sleeping", "scratch"][randomInt(0, 1)];
+      this.idleFrame = 0;
     }
 
     switch (idleAnimation ?? this.currAnim) {
       case "tired":
       case "sleeping":
-        if (this.idleFrame < 8) {
+        if (this.idleFrame < 5) {
           this.setAnimation("tired");
         } else {
           this.setAnimation("sleeping", 1600);
         }
         if (this.idleFrame > 192) {
           this.idleFrame = 0;
-          this.setAnimation("idle", 0)
+          this.setAnimation("idle", 0);
         }
         break;
       case "scratch":
         this.setAnimation("scratch", 300);
         if (this.idleFrame > 9) {
           this.idleFrame = 0;
-          this.setAnimation("idle", 0)
+          this.setAnimation("idle", 0);
         }
         break;
       default:
@@ -171,6 +173,7 @@ export class ONekoElement extends HTMLElement {
 
     this.idleFrame += 1;
   }
+
 
   setAnimation(name, duration = 200, startFrame = 0) {
     if (this.currAnim === name) return;
