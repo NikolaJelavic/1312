@@ -8,134 +8,89 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/ico" href="./cats/favicon.jpg" />
   </head>
-  <body>
-    <div class="index">
-      <a href="game.html">
-
-        <div>
-          <p>A game for cats and math lovers</p>
-        </div>
-      </a>
-      <a href="breeds.html">
-      <div>
-
-          <p>page about cat breeds</p>
-          
-        </div>
-      </a>
-    </div>
-    <!-- <header>
+  <body >
       
-      <div class="waviy">
-        <span style="--i: 1" class="letterA">A</span>
-        <span style="--i: 2">l</span>
-        <span style="--i: 3">l</span>
-        <span style="--i: 4">&#128049</span>
-        <span style="--i: 5">C</span>
-        <span style="--i: 6">a</span>
-        <span style="--i: 7">t</span>
-        <span style="--i: 8">s</span>
-        <span style="--i: 9">&#128008</span>
-        <span style="--i: 10">A</span>
-        <span style="--i: 11">r</span>
-        <span style="--i: 12">e</span>
-        <span style="--i: 13">&#128049</span>
-        <span style="--i: 14">B</span>
-        <span style="--i: 15">e</span>
-        <span style="--i: 16">a</span>
-        <span style="--i: 17">u</span>
-        <span style="--i: 18">t</span>
-        <span style="--i: 19">i</span>
-        <span style="--i: 20">f</span>
-        <span style="--i: 21">u</span>
-        <span style="--i: 22">l</span>
-        <
-      </div>
-      <div class="images" data-js="clicksCounter">
-        <div class="image" id="add" data-js="plus">
-          <img src="./cats/twocats.jpg" alt="image" class="image" />
-          <div class="hidden"><p>n+n</p></div>
-        </div>
-
-        <div class="image" id="power2" data-js="n2">
-          <img src="./cats/cat-square1.jpg" alt="image" class="image" />
-          <div class="hidden"><p>n**2</p></div>
-        </div>
-
-        <div class="image" data-js="n3">
-          <img src="./cats/powerOf3.png" alt="image" class="image" />
-          <div class="hidden"><p>n**3</p></div>
-        </div>
-
-        <div class="image" data-js="pi">
-          <img src="./cats/cat3.14.png" alt="image" class="image" />
-          <div class="hidden"><p>n*π</p></div>
-        </div>
-        <div class="image" data-js="√n">
-          <img src="./cats/under-tree.jpg" alt="image" class="image" />
-          <div class="hidden"><p>√n</p></div>
-        </div>
-        <div class="image" data-js="divide">
-          <img src="./cats/cat-divided.jpg" alt="image" class="image" />
-          <div class="hidden"><p>n/2</p></div>
-        </div>
-        <div class="image" data-js="addProcent10">
-          <img src="./cats/plus10.png" alt="add 10 procent" class="image" />
-          <div class="hidden"><p>n+10%</p></div>
-        </div>
-        <div class="image" data-js="removeProcent10">
-          <img src="./cats/minus10.png" alt="remove 10 procent" class="image" />
-          <div class="hidden"><p>n+10%</p></div>
-        </div>
-      </div>
-    </header> -->
-    <!-- <main>
-      <section data-js="message"></section>
-      <section >
-        <div class="middle">
-        <h3>Input a number</h3>
-        <input
-          type="text"
-          id="input"
-          name="output"
-          pattern="[1-5]"
-          placeholder=" Between 1 and 5"
-          data-js="input"
-          autofocus
-        />
-        <p>and reach the number 1312 as less clicks(on images) as possible</p>
-      </div>
-        
-        <p data-js="clicks" id="clicks"></p>
-      </section>
-      <section class="fine">
-        <div class="fineTuning">
-          <div class="fineTuning1" data-js="plus1">
-            <p data-js="counter">+1</p>
-          </div>
-          <div class="fineTuning1" data-js="plus5">
-            <p data-js="counter">+5</p>
-          </div>
-          <div class="fineTuning1" data-js="minus1">
-            <p data-js="counter">-1</p>
-          </div>
-          <div class="fineTuning1" data-js="minus5">
-            <p data-js="counter">-5</p>
-          </div>
-        </div>
-      </section>
-    </main> -->
-
-    <!-- <div class="modal" id="successModal">
-      <div class="modal-content">
-        <span class="close" id="closeModal">&times;</span>
-        <p>Well done!!</p>
-      </div>
-    </div> -->
-
-    <!-- <footer data-js="message"></footer>
- 
-    <script src="./index.js"></script> -->
     
+    <div style="height: 100vh;">
+      
+      <div class="index">
+        
+        
+        <a href="game.html">
+          
+          <div class="game">
+            <p >A game for cats and math lovers</p>
+          </div>
+        </a>
+        
+        <a href="breeds.html">
+          <div class="breeds">
+            
+            <p>Page about the cat breeds</p>
+            
+          </div>
+        </a>
+        
+      </div>
+      <!-- Black cat -->
+      <o-neko
+      id="$bigNeko" 
+      speed="15"
+      style=" filter: invert(100%); transform: scale(2)"
+      ></o-neko>
+
+      <o-neko
+      y="200"
+      x="200"
+      speed="11"
+      id="$smallNeko"
+      style="filter: invert(0.25) sepia(1) hue-rotate(0.7turn)"
+      ></o-neko>
+    </div>
+    
+    
+    
+    <script>
+      // localStorage.removeItem("$smallNeko");
+      
+      // for (let i = 0; i < 3; i++) {
+        //   const neko = document.createElement("o-neko");
+        //   neko.setAttribute('x', Math.random() * window.innerWidth)
+        //   neko.setAttribute('y', Math.random() * window.innerHeight)
+        //   neko.setAttribute('speed', (Math.random() * 14) + 6)
+        //   neko.style.transform = `scale(${(Math.random() + 1) * Math.random() + 0.5})`
+        //   neko.style.filter = `invert(${(Math.random()) * 2}) sepia(${Math.random() * 2}) saturate(${Math.random() * 10}) hue-rotate(${Math.random()}turn)`
+        //   // neko.style.willChange = 'left, top, background-position, transform'
+        //   document.body.append(neko)
+        // }
+        
+        const nekoList = [
+          { $neko: $smallNeko, name: "$smallNeko" },
+          { $neko: $bigNeko, name: "$bigNeko" },
+        ];
+        
+        window.onload = () => {
+          nekoList.forEach(({ $neko, name }) => {
+            const data = JSON.parse(localStorage.getItem(name));
+            Object.assign($neko.neko, data);
+            Object.assign($neko.goto, data);
+            $neko.updatePosition();
+          });
+          
+          window.onbeforeunload = () => {
+            nekoList.forEach(({ $neko, name }) => {
+              const data = { x: $neko.neko.x, y: $neko.neko.y };
+              localStorage.setItem(name, JSON.stringify(data));
+            });
+          };
+        };
+        </script>
+
+      <script src="./oneko.js"></script>    <!-- white cat -->
+
+      <script src="./oneko-element.js?define" type="module"></script>  <!-- black and pink cat -->
+
+      <script src="./index.js"></script> 
   </body>
-</html>
+  </html>
+  

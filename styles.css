@@ -35,15 +35,60 @@ header {
   align-items: center;
   height: 100vh;
 }
-.index div{
-  text-align: center; 
+
+.index a {
+  text-decoration: none; 
+}
+
+.index div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   width: 20vw;
-  height: 20vh;
+  height: 30vh;
   background-color: #f45050;
-  margin: 5px;
+  margin: 50px;
   border-radius: 10px;
 
+  
 }
+
+.index p {
+  margin: 0; /* Remove default paragraph margin */
+  color: var(--blue); /* Set text color */
+  font-size: 3.5em;
+}
+
+.breeds{
+  -webkit-box-shadow: 
+  7px -5px 10px 0px #FF0000, 
+  11px -9px 10px 0px #FF7F00, 
+  16px -14px 10px 0px #FFFF00, 
+  20px -17px 10px 0px #00FF00, 
+  24px -19px 10px 0px #0000FF, 
+  27px -23px 10px 0px #4B0082, 
+  5px 5px 15px 5px black; 
+ box-shadow: 7px -5px 10px 0px #FF0000, 
+ 11px -9px 10px 0px #FF7F00, 
+ 16px -14px 10px 0px #FFFF00, 
+ 20px -17px 10px 0px #00FF00, 
+ 24px -19px 10px 0px #0000FF, 
+ 27px -23px 10px 0px #4B0082, 
+ 5px 5px 15px 5px black; ;
+}
+
+.game{
+  -webkit-box-shadow: 
+  0px 0px 0px 8px #000000, 
+  0px 0px 0px 16px #4B4C4B, 
+  0px 0px 0px 24px #828482, 
+  0px 0px 0px 31px #B2B5B2, 
+  0px 0px 0px 39px #DADDDA, 
+  5px 5px 15px 5px rgba(0,0,0,0); 
+
+  box-shadow: 0px 0px 0px 8px #000000, 0px 0px 0px 16px #4B4C4B, 0px 0px 0px 24px #828482, 0px 0px 0px 31px #B2B5B2, 0px 0px 0px 39px #DADDDA, 5px 5px 15px 5px rgba(0,0,0,0);
+  }
 
 .images {
   display: flex;
@@ -253,6 +298,7 @@ h3 {
 .waviy {
   position: relative;
   text-align: center;
+  margin: 30px 0px 40px 0px;
 }
 .waviy span {
   position: relative;
@@ -404,7 +450,7 @@ nav {
   justify-content: center;
   align-items: center;
   height: 50px; /* You can adjust the height as needed */
-  background-color: #f0f0f0; /* Optional: Add a background color */
+  background-color: var(--red); /* Optional: Add a background color */
 }
 
 nav a {
@@ -415,5 +461,5 @@ nav a {
 }
 
 nav a:hover {
-  color: #007bff; /* Change color on hover */
+  color: var(--blue); /* Change color on hover */
 }
