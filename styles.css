@@ -34,6 +34,8 @@ header {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  flex-direction: row;
+
 }
 
 .index a {
@@ -54,10 +56,41 @@ header {
   
 }
 
+@media only screen and (max-width: 1024px) {
+  .index {
+    flex-direction: column;
+    align-items: stretch; /* Ensures the items stretch to full width */
+  }
+
+  .index div {
+    width: 60vw; 
+  }
+  .index p {
+    font-size: 4em !important;
+
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .index {
+    flex-direction: column;
+    align-items: stretch; 
+  }
+
+  .index div {
+    width: 60vw; 
+    height:20vh;
+  }
+  .index p {
+    font-size: 2em !important;
+
+  }
+}
+
 .index p {
-  margin: 0; /* Remove default paragraph margin */
-  color: var(--blue); /* Set text color */
-  font-size: 3.5em;
+  margin: 0; 
+  color: var(--blue); 
+  font-size: 3vw;
 }
 
 .breeds{
@@ -78,17 +111,24 @@ header {
  5px 5px 15px 5px black; ;
 }
 
-.game{
+.game {
   -webkit-box-shadow: 
-  0px 0px 0px 8px #000000, 
-  0px 0px 0px 16px #4B4C4B, 
-  0px 0px 0px 24px #828482, 
-  0px 0px 0px 31px #B2B5B2, 
-  0px 0px 0px 39px #DADDDA, 
-  5px 5px 15px 5px rgba(0,0,0,0); 
+    0px 0px 0px 8px #4B0000, 
+    0px 0px 0px 16px #8C1C1C, 
+    0px 0px 0px 24px #CC4444, 
+    0px 0px 0px 31px #FF7F7F, 
+    0px 0px 0px 39px #FFAAAA, 
+    5px 5px 15px 5px rgba(0,0,0,0); 
 
-  box-shadow: 0px 0px 0px 8px #000000, 0px 0px 0px 16px #4B4C4B, 0px 0px 0px 24px #828482, 0px 0px 0px 31px #B2B5B2, 0px 0px 0px 39px #DADDDA, 5px 5px 15px 5px rgba(0,0,0,0);
-  }
+  box-shadow: 
+    0px 0px 0px 8px #4B0000, 
+    0px 0px 0px 16px #8C1C1C, 
+    0px 0px 0px 24px #CC4444, 
+    0px 0px 0px 31px #FF7F7F, 
+    0px 0px 0px 39px #FFAAAA, 
+    5px 5px 15px 5px rgba(0,0,0,0);
+}
+
 
 .images {
   display: flex;
