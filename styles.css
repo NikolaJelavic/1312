@@ -503,3 +503,36 @@ nav a {
 nav a:hover {
   color: var(--blue); /* Change color on hover */
 }
+
+
+.accordion {
+  width: 40vw;
+}
+
+.accordion-button , .accordion-button:not(.collapsed){
+  background-color: var(--red);
+  color: black
+}
+
+.breedsAccordion{
+  display: flex;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 768px) {
+  .breedsAccordion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .accordion{
+    width: 80vw;
+    margin-bottom: 5vh;
+  }
+}
+
+.catImg {
+  width:35%;
+}
