@@ -75,22 +75,16 @@
           <img src="./cats/cat-divided.jpg" alt="image" class="image" />
           <div class="hidden"><p>n/2</p></div>
         </div>
-        <div class="image" data-js="addProcent10">
-          <img src="./cats/plus10.png" alt="add 10 procent" class="image" />
-          <div class="hidden"><p>n+10%</p></div>
-        </div>
-        <div class="image" data-js="removeProcent10">
-          <img src="./cats/minus10.png" alt="remove 10 procent" class="image" />
-          <div class="hidden"><p>n+10%</p></div>
-        </div>
+
+        
       </div>
     </header>
     <main>
       <section data-js="message"></section>
       <section >
         <div class="middle">
-        <h3>Input a number</h3>
-        <input
+          <h3>Input a number</h3>
+          <input
           type="text"
           id="input"
           name="output"
@@ -98,13 +92,27 @@
           placeholder=" Between 1 and 5"
           data-js="input"
           autofocus
-        />
-        <p >and reach the number 1312 as less clicks(on images) as possible</p>
-      </div>
+          />
+          <p >and reach the number 1312 as less <br>clicks (on images and numbers) as possible</p>
+        </div>
         
         <p data-js="clicks" id="clicks"></p>
       </section>
       <section class="fine">
+
+        <div class="percentage">
+        <div class="ten" data-js="addProcent10">
+          <!-- <img src="./cats/plus10.png" alt="add 10 procent" class="image" /> -->
+          <p>+10%</p>
+          <!-- <div class="hidden"><p>n+10%</p></div> -->
+        </div>
+        <div class="ten" data-js="removeProcent10">
+          <!-- <img src="./cats/minus10.png" alt="remove 10 procent" class="image" /> -->
+          <p>-10%</p>
+          <!-- <div class="hidden"><p>n+10%</p></div> -->
+        </div>
+      </div>
+
         <div class="fineTuning">
           <div class="fineTuning1" data-js="plus1">
             <p data-js="counter">+1</p>
