@@ -1,4 +1,4 @@
-console.clear();
+// console.clear();
 
 let plus = document.querySelector("[data-js=plus]");
 let power2 = document.querySelector("[data-js=n2]");
@@ -15,11 +15,16 @@ let minus1 = document.querySelector("[data-js=minus1]");
 let minus5 = document.querySelector("[data-js=minus5]");
 
 let message = document.querySelector("[data-js=message]");
-let clicksCounter = document.querySelector("[data-js=clicksCounter]");
+// let clicksCounter = document.querySelector("[data-js=clicksCounter]");
+let imageElements = document.querySelectorAll("[data-js=clicksCounter] .image img");
+
+
+
 let fineTuning = document.querySelector(".fineTuning");
-let clicks = document.querySelector("[data-js=clicks]");
 
 let inputString = document.querySelector("[data-js=input]");
+let clicks = document.querySelector("[data-js=clicks]");
+
 
 inputString.addEventListener("input", () => {
   let inputValue = inputString.value;
@@ -113,9 +118,16 @@ minus5.addEventListener("click", () => {
 });
 
 let counter = 0;
-clicksCounter.addEventListener("click", () => {
+// clicksCounter.addEventListener("click", () => {
+  imageElements.forEach((img) => {
+    img.addEventListener("click", (event) => {
+      // event.stopPropagation(); 
+
+      
   counter++;
   clicks.innerHTML = counter;
+
+
   if (counter >= 5 && counter < 7) {
     message.innerHTML =
       '<img src="./cats/support1.jpg" width="400px" height="400px">';
@@ -158,9 +170,12 @@ clicksCounter.addEventListener("click", () => {
     });
   }
 });
-fineTuning.addEventListener("click", () => {
-  counter++;
-  clicks.innerHTML = counter;
+});
+
+document.querySelectorAll("[data-js=addProcent10], [data-js=removeProcent10], [data-js=plus1], [data-js=plus5], [data-js=minus1], [data-js=minus5]").forEach((element) => {
+  element.addEventListener("click", () => {
+    counter++;
+    clicks.innerHTML = counter;
   if (counter >= 5 && counter < 7) {
     message.innerHTML =
       '<img src="./cats/support1.jpg" width="400px" height="400px">';
@@ -202,4 +217,6 @@ fineTuning.addEventListener("click", () => {
       successModal.style.display = "none";
     });
   }
+}
+  )
 })
