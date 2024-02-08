@@ -263,7 +263,8 @@ input::-webkit-inner-spin-button {
 }
 
 h3 {
-  padding-top: 5%;
+  /* padding-top: 3%; */
+  margin: 0;
   text-align: center;
   font-size: 2.5em;
   /* font-weight: 900; */
