@@ -525,6 +525,21 @@ section p{
     /* justify-content: space-evenly; */
   
   }
+  .modall{
+    width: 95% !important;
+    height: 60% !important;
+    background-image: url("https://res.cloudinary.com/dapwniqqn/image/upload/v1708165902/1312/Black-cat-with-green-eyes-photo-_-Free-Cat-Image-on-Unsplash_xdfsih.png") !important;
+  }
+  .modall-content p{
+    font-size: 2em !important;
+    text-align: center ;
+  }
+  .modall-content{
+    justify-content: start !important;
+   
+
+  }
+
 }
 
 
@@ -645,4 +660,79 @@ p{
 
 .input {
   font-family: 'Honk', system-ui;
+}
+
+
+
+.modall {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  height: 70vh;
+  width: 70vw;
+  background-image: url("https://res.cloudinary.com/dapwniqqn/image/upload/v1708164174/1312/eyes-4789730_1280_ecvxbp.jpg");
+  background-position: center; /* Center the background image */
+  background-size: cover; /* Make the background image cover the entire background */
+  border-radius: 50px;
+}
+
+
+.modall-content {
+  position: relative; /* Make the content container relative */
+  /* background-color: darkgray; */
+  margin: auto;
+  padding: 20px;
+  /* border: 1px solid #888; */
+  width: 100%;
+  height: 100%; /* Adjusted to ensure modal fits within the viewport */
+  overflow-y: auto; /* Add scrollbar if content exceeds max height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.modall p{
+  font-size:4.5em;
+  color:var(--yellow);
+  font-family: 'Honk', system-ui;
+}
+
+.close {
+  color: red;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.red{
+  background-color: var(--red);
+  width: 120px;
+  height: 70px;
+  font-size: xx-large;
+  border-radius:10px ;
+  font-family: 'Honk', system-ui;
+}
+.green{
+  background-color:chartreuse;
+  width: 170px;
+  height: 70px;
+  font-size: xx-large;
+  border-radius:10px ;
+  font-family: 'Honk', system-ui;
+}
+.buttons{
+  margin-top: 20px;
 }
