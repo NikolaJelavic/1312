@@ -220,3 +220,7 @@ document.querySelectorAll("[data-js=addProcent10], [data-js=removeProcent10], [d
 }
   )
 })
+
+
+
+

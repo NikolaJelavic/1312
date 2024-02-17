@@ -1,134 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/ico" href="./cats/favicon.jpg" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/ico" href="./cats/favicon.jpg" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
     
-  </head>
-  <body >
-      
-    
-    <div style="height: 100vh;">
-      
-      <div class="index">
-        
-        
-        <a href="game.html">
-          
-          <div class="game">
-            <p class="gFont">A game for cats and math lovers</p>
-          </div>
-        </a>
-        
-        <a href="breeds.html">
-          <div class="breeds">
-            
-            <p class="gFont">Page about the cat breeds</p>
-            
-          </div>
-        </a>
-        
-      </div>
-      <!-- Black cat -->
-      <o-neko
-        id="$bigNeko" 
-        speed="20"
-        offset-x="10"
-        offset-y="10"
-        style="filter: invert(100%); transform: scale(2)"
-      ></o-neko>
-  
-  <!-- pink cat -->
-      <o-neko
-          id="$pinkNeko"
-          y="200"
-          x="200"
-          speed="13"
-          offset-x="20"
-          offset-y="-40"
-          style="filter: invert(0.25) sepia(1) hue-rotate(0.7turn)"
-      ></o-neko>
-    <!-- white cat -->
-      <o-neko
-        id="$whiteNeko"
-        y="200"
-        x="200"
-        speed="10"
-        offset-x="-20"
-        offset-y="40"
-    
-      ></o-neko>
-      <!-- gray cat, should be brown cat -->
-      <o-neko
-      id="$darkBrownNeko"
-      y="200"
-      x="200"
-      speed="15"
-      offset-x="20"
-      offset-y="-40"
-      style="filter: sepia(100%) brightness(60%) saturate(120%) hue-rotate(20deg); transform: scale(1.5)"
-  ></o-neko>
-  
+</head>
+<body>
 
-  
-  
+<!-- The Modal -->
+<div id="myModall" class="modall" style="display: block;">
+
+  <!-- Modal content -->
+  <div class="modall-content">
+    <p>Are all cats beautiful?</p>
+    <div class="buttons">
+      <button class="red" id="closeModal">Yes</button>
+      <button class="green" >Of course</button>
     </div>
-    
-    
-    
-    <script>
-      // localStorage.removeItem("$smallNeko");
-      
-      // for (let i = 0; i < 3; i++) {
-        //   const neko = document.createElement("o-neko");
-        //   neko.setAttribute('x', Math.random() * window.innerWidth)
-        //   neko.setAttribute('y', Math.random() * window.innerHeight)
-        //   neko.setAttribute('speed', (Math.random() * 14) + 6)
-        //   neko.style.transform = `scale(${(Math.random() + 1) * Math.random() + 0.5})`
-        //   neko.style.filter = `invert(${(Math.random()) * 2}) sepia(${Math.random() * 2}) saturate(${Math.random() * 10}) hue-rotate(${Math.random()}turn)`
-        //   // neko.style.willChange = 'left, top, background-position, transform'
-        //   document.body.append(neko)
-        // }
-        
-        const nekoList = [
-          { $neko: $pinkNeko, name: "$pinkNeko" },
-          { $neko: $whiteNeko, name: "$whiteNeko" },
-          { $neko: $brownNeko, name: "$brownNeko" },
-          { $neko: $bigNeko, name: "$bigNeko" },
-        ];
-        
-        window.onload = () => {
-          nekoList.forEach(({ $neko, name }) => {
-            const data = JSON.parse(localStorage.getItem(name));
-            Object.assign($neko.neko, data);
-            Object.assign($neko.goto, data);
-            $neko.updatePosition();
-          });
-          
-          window.onbeforeunload = () => {
-            nekoList.forEach(({ $neko, name }) => {
-              const data = { x: $neko.neko.x, y: $neko.neko.y };
-              localStorage.setItem(name, JSON.stringify(data));
-            });
-          };
-        };
-        </script>
+  </div>
 
-      <!-- <script src="./oneko.js"></script>    white cat -->
+</div>
+    
+<div style="height: 100vh;">
+  <div class="index">
+    <a href="game.html">
+      <div class="game">
+        <p class="gFont">A game for cats and math lovers</p>
+      </div>
+    </a>
+    <a href="breeds.html">
+      <div class="breeds">
+        <p class="gFont">Page about the cat breeds</p>
+      </div>
+    </a>
+  </div>
+  <!-- Black cat -->
+  <o-neko
+    id="$bigNeko" 
+    speed="20"
+    offset-x="10"
+    offset-y="10"
+    style="filter: invert(100%); transform: scale(2)"
+  ></o-neko>
 
-      <script src="./oneko-element.js?define" type="module"></script>  <!-- black and pink cat -->
+  <!-- pink cat -->
+  <o-neko
+    id="$pinkNeko"
+    y="200"
+    x="200"
+    speed="13"
+    offset-x="20"
+    offset-y="-40"
+    style="filter: invert(0.25) sepia(1) hue-rotate(0.7turn)"
+  ></o-neko>
 
-      <script src="./index.js"></script>
-      
-      
-  </body>
-  </html>
-  
+  <!-- white cat -->
+  <o-neko
+    id="$whiteNeko"
+    y="200"
+    x="200"
+    speed="10"
+    offset-x="-20"
+    offset-y="40"
+  ></o-neko>
+
+  <!-- brown cat -->
+  <o-neko
+    id="$brownNeko"
+    y="200"
+    x="200"
+    speed="15"
+    offset-x="20"
+    offset-y="-40"
+    style="filter: sepia(100%) brightness(60%) saturate(120%) hue-rotate(20deg); transform: scale(1.5)"
+  ></o-neko>
+</div>
+
+<script>
+  const nekoList = [
+    { $neko: $pinkNeko, name: "$pinkNeko" },
+    { $neko: $whiteNeko, name: "$whiteNeko" },
+    { $neko: $brownNeko, name: "$brownNeko" },
+    { $neko: $bigNeko, name: "$bigNeko" },
+  ];
+
+  window.onload = () => {
+    nekoList.forEach(({ $neko, name }) => {
+      const data = JSON.parse(localStorage.getItem(name));
+      Object.assign($neko.neko, data);
+      Object.assign($neko.goto, data);
+      $neko.updatePosition();
+    });
+
+    window.onbeforeunload = () => {
+      nekoList.forEach(({ $neko, name }) => {
+        const data = { x: $neko.neko.x, y: $neko.neko.y };
+        localStorage.setItem(name, JSON.stringify(data));
+      });
+    };
+  };
+</script>
+
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModall");
+
+  // Get all buttons inside the modal
+  var buttons = modal.querySelectorAll("button");
+
+  // Attach event listener to all buttons inside the modal
+  buttons.forEach(function(button) {
+    button.onclick = function() {
+      modal.style.display = "none";
+    };
+  });
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+</script>
+
+
+<!-- <script src="./oneko.js"></script>    white cat -->
+<script src="./oneko-element.js?define" type="module"></script>  <!-- black and pink cat -->
+<script src="./index.js"></script>
+
+</body>
+</html>
