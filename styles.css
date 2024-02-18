@@ -186,26 +186,26 @@ img {
   /* margin-top: -15%; */
 }
 
-img.image:hover {
-  border: 2px solid black;
+.hidden {
+  /* font-family: 'Mountains of Christmas', serif; */
+  top: -55px;
+  display: none;
 }
+.hidden h4{
+  font-family: 'Honk', system-ui;
+  font-size: 3em !important;
+}
+
 .image:hover .hidden {
   display: flex;
   position: absolute;
+  font-family: 'Honk', system-ui; /* Add this line */
 }
-/* .image:hover .hidden {
-  display: block;
-} */
 
-.hidden {
-  /* font-family: 'Mountains of Christmas', serif; */
-  font-family: 'Honk', system-ui;
-
-  top: -55px;
-  display: none;
-  font-size: 3em;
-
+img.image:hover {
+  border: 2px solid black;
 }
+
 
 main {
 
@@ -527,7 +527,7 @@ section p{
   }
   .modall{
     width: 95% !important;
-    height: 60% !important;
+    height: 65% !important;
     background-image: url("https://res.cloudinary.com/dapwniqqn/image/upload/v1708165902/1312/Black-cat-with-green-eyes-photo-_-Free-Cat-Image-on-Unsplash_xdfsih.png") !important;
   }
   .modall-content p{
@@ -735,4 +735,7 @@ p{
 }
 .buttons{
   margin-top: 20px;
+}
+.pointer:hover {
+  cursor:pointer;
 }
