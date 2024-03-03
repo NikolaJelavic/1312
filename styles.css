@@ -25,6 +25,17 @@ h1 {
   font-family: 'Mountains of Christmas', serif;
 
 }
+h4 {
+  color: orangered;
+  text-align: center;
+  font-size: 4em;
+  font-weight: 900;
+  /* padding-top: 2%; */
+  background-color: whitesmoke;
+  text-shadow: 3px 3px 3px yellow;
+  font-family: 'Mountains of Christmas', serif;
+
+}
 
 header {
   background-color: whitesmoke;
@@ -738,4 +749,30 @@ p{
 }
 .pointer:hover {
   cursor:pointer;
+}
+
+.backgroundIndex{
+      background-image: url('https://res.cloudinary.com/dapwniqqn/image/upload/v1709464953/1312/background/brian-wangenheim-ULDjeyeQL08-unsplash_vde8uj.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+}
+
+.backgroundBreeds{
+      background-image: url('https://res.cloudinary.com/dapwniqqn/image/upload/v1709464944/1312/background/wood-2045379_1280_o2uhfs.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+}
+
+.backgroundGame{
+      background-image: url('https://res.cloudinary.com/dapwniqqn/image/upload/v1709464944/1312/background/floor-1866663_1280_ktr94s.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+}
+
+.accordion-item{
+  /* background-color: saddlebrown; */
+  border: 1px solid saddlebrown;
 }
