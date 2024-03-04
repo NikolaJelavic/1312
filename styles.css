@@ -31,7 +31,7 @@ h4 {
   font-size: 4em;
   font-weight: 900;
   /* padding-top: 2%; */
-  background-color: whitesmoke;
+  /* background-color: whitesmoke; */
   text-shadow: 3px 3px 3px yellow;
   font-family: 'Mountains of Christmas', serif;
 
@@ -64,13 +64,15 @@ header {
   height: 30vh;
   background-color: darkgray;
   margin: 50px;
-  border-radius: 10px;
-  /* border:1px solid; */
-  
-
-  
+  border-radius: 10px;  
+  background-image: url('https://res.cloudinary.com/dapwniqqn/image/upload/v1709464944/1312/background/texture-1099399_1280_w7qsqu.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.2s ease;
 }
-
+.index div:hover {
+  transform: translateY(-2px) translateX(2px); /* Moves the button 5px upwards and 5px to the right when hovered */
+}
 
 
 @media only screen and (max-width: 1024px) {
@@ -111,21 +113,22 @@ header {
 }
 
 .breeds{
-  -webkit-box-shadow: 
-  7px -5px 10px 0px #FF0000, 
+  -webkit-box-shadow: 7px -5px 10px 0px rgb(73, 59, 59);
+  /* 7px -5px 10px 0px #FF0000, 
   11px -9px 10px 0px #FF7F00, 
   16px -14px 10px 0px #FFFF00, 
   20px -17px 10px 0px #00FF00, 
   24px -19px 10px 0px #0000FF, 
   27px -23px 10px 0px #4B0082, 
-  5px 5px 15px 5px black; 
- box-shadow: 7px -5px 10px 0px #FF0000, 
+  5px 5px 15px 5px black;  */
+ box-shadow: 
+ /* 7px -5px 10px 0px #FF0000, 
  11px -9px 10px 0px #FF7F00, 
  16px -14px 10px 0px #FFFF00, 
  20px -17px 10px 0px #00FF00, 
  24px -19px 10px 0px #0000FF, 
  27px -23px 10px 0px #4B0082, 
- 5px 5px 15px 5px black; ;
+ 5px 5px 15px 5px black;  */
 }
 
 .game {
@@ -144,21 +147,22 @@ header {
     0px 0px 0px 31px #FF7F7F, 
     0px 0px 0px 39px #FFAAAA, 
     5px 5px 15px 5px rgba(0,0,0,0); */
-    -webkit-box-shadow: 
-  7px -5px 10px 0px #FF0000, 
+    -webkit-box-shadow: 7px -5px 10px 0px rgb(73, 59, 59);
+  /* 7px -5px 10px 0px #FF0000, 
   11px -9px 10px 0px #FF7F00, 
   16px -14px 10px 0px #FFFF00, 
   20px -17px 10px 0px #00FF00, 
   24px -19px 10px 0px #0000FF, 
   27px -23px 10px 0px #4B0082, 
-  5px 5px 15px 5px black; 
- box-shadow: 7px -5px 10px 0px #FF0000, 
+  5px 5px 15px 5px black;  */
+ box-shadow: 7px -5px 10px 0px rgb(73, 59, 59);
+ /* 7px -5px 10px 0px #FF0000, 
  11px -9px 10px 0px #FF7F00, 
  16px -14px 10px 0px #FFFF00, 
  20px -17px 10px 0px #00FF00, 
  24px -19px 10px 0px #0000FF, 
  27px -23px 10px 0px #4B0082, 
- 5px 5px 15px 5px black; ;
+ 5px 5px 15px 5px black;  */
 }
 
 .gFont{
@@ -776,3 +780,15 @@ p{
   /* background-color: saddlebrown; */
   border: 1px solid saddlebrown;
 }
+
+span.cat{
+  text-shadow: none;
+}
+.accordion-button:focus{
+outline:4px solid brown !important;
+}
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(-180deg);
+  filter: hue-rotate(0deg) saturate(1%); /* Adjust values to achieve brown color */
+}
+
